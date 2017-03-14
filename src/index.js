@@ -49,6 +49,8 @@ function route(url, replace=false) {
 	// only push URL into history if we can handle it
 	if (canRoute(url)) {
 		setUrl(url, replace ? 'replace' : 'push');
+
+		window.scrollTo(0, 0);
 	}
 
 	return routeTo(url);
